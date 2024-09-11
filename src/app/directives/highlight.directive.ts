@@ -1,10 +1,10 @@
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
 })
-export class HighlightDirective {
-  @Input() color: string = 'yellow';
+export class HighlightDirective implements OnInit {
+  @Input() color = 'yellow';
 
   @HostBinding('style.backgroundColor') backgroundColor!: string;
 

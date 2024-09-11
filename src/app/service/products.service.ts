@@ -17,7 +17,7 @@ export class ProductsService {
   getProducts() {
     return this.http.get<Product[]>(this.URL).pipe(
       retry(2),
-      catchError((error: any) => {
+      catchError((error: Error) => {
         throw error;
       })
     );

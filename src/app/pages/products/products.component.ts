@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductsService } from '../../service/products.service';
 import { Product } from '../../models';
 import { Subscription } from 'rxjs';
@@ -8,10 +8,10 @@ import { Subscription } from 'rxjs';
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit, OnDestroy {
   productSubscription: Subscription | undefined;
   products: Product[] = [];
-  error: any;
+  error: Error | null = null;
   loading = true;
   constructor(private productsService: ProductsService) {}
 

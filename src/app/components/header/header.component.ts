@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../service/products.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ProductsService } from '../../service/products.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isDarkMode = false;
 
   ngOnInit() {
