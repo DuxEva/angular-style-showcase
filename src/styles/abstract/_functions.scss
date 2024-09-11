@@ -1,0 +1,21 @@
+@use "sass:math";
+
+
+// @function adjust-color($color, $percentage) {
+//   @if $percentage >0 {
+//     @return lighten($color, $percentage);
+//   }
+
+//   @else {
+//     @return darken($color, abs($percentage));
+//   }
+// }
+
+@function scale-spacing($factor) {
+  $base-spacing: 1rem;
+  @return $factor * $base-spacing;
+}
+
+@function theme-color($theme, $key) {
+  @return map-get($theme, $key);
+}

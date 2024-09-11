@@ -6,7 +6,6 @@
     color: #333;
     font-size: 1.5rem;
     font-weight: 300;
-    // text-align: center;
     overflow-y: hidden;
 
     img {
@@ -15,7 +14,6 @@
         object-fit: cover;
       }
 
-    // second div
     .content-container{
       position: absolute;
       top: 0;
@@ -63,18 +61,4 @@
 
     }
 
-    // button{
-    //     margin-top: 1rem;
-    //     padding: 0.5rem 1rem;
-    //     border: none;
-    //     background-color: #007bff;
-    //     color: #fff;
-    //     font-size: 1rem;
-    //     font-weight: 500;
-    //     cursor: pointer;
-    //     transition: background-color 0.3s;
-    //     &:hover{
-    //         background-color: #0056b3;
-    //     }
-    // }
 }

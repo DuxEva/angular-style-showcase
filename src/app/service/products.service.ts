@@ -8,7 +8,11 @@ import { catchError, retry } from 'rxjs';
 })
 export class ProductsService {
   URL = 'https://fakestoreapi.com/products';
-  constructor(private http: HttpClient) {}
+  theme = localStorage.getItem('theme') || 'light-mode';
+
+  constructor(private http: HttpClient) {
+    console.log('theme', this.theme);
+  }
 
   getProducts() {
     return this.http.get<Product[]>(this.URL).pipe(
@@ -17,5 +21,15 @@ export class ProductsService {
         throw error;
       })
     );
+  }
+
+  setTheme(theme: string) {
+    this.theme = theme;
+    localStorage.setItem('theme', theme);
+    document.body.className = theme;
+  }
+
+  getTheme() {
+    return this.theme;
   }
 }

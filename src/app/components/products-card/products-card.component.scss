@@ -6,6 +6,7 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: inherit;
 
   &:hover {
     border: $white 1px solid;
@@ -33,12 +34,10 @@
     .card-title {
       font-size: 1.3rem;
       margin-bottom: 6px;
-      color: #333;
     }
 
     .card-text {
       margin-bottom: 6px;
-      color: #777;
 
       &:last-child {
         margin-bottom: 0;

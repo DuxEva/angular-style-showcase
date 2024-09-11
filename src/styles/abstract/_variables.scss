@@ -1,0 +1,25 @@
+$bg-color_light: #F8F8FB;
+$color_dark: #141625;
+$green: rgb(50 106 85);
+$white: #fff;
+
+$light-theme:(
+  background: #ffffff,
+  background-color: #F8F8FB,
+  color: #000,
+  green: $green,
+  white: $white,
+  title: #333,
+  description: #777
+);
+
+$dark-theme: (
+  background: #000,
+  background-color: #141625,
+  color: #fff,
+  green: $white,
+  white: $color_dark,
+  title: #fff,
+  description: #fff
+  
+)

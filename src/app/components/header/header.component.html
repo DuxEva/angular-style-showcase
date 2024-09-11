@@ -3,8 +3,12 @@
   <nav class="nav">
     <a routerLink="/home">Home</a>
     <a routerLink="/products">products</a>
-    
-    <div class="theme">
+
+    <div
+      class="theme"
+      (click)="toggleTheme()"
+      [ngClass]="{ 'dark-mode': isDarkMode }"
+    >
       <div class="circle"></div>
     </div>
   </nav>
