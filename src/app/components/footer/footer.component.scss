@@ -1,0 +1,18 @@
+@import '../../../styles';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $white;
+  color: $green;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

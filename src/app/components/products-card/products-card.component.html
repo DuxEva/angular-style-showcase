@@ -1,0 +1,17 @@
+<div class="card" *ngIf="product">
+  <img [src]="product.image" class="card-img-top" alt="{{ product.title }}" />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.title.slice(0, 50) }}...</h5>
+    <p class="card-text">{{ product.description.slice(0, 100) }}...</p>
+    <p class="card-text"><strong>Category:</strong> {{ product.category }}</p>
+    <p class="card-text">
+      <strong>Price:</strong> ${{ product.price.toFixed(2) }}
+    </p>
+    <p class="card-text">
+      <strong>Rating:</strong> {{ product.rating.rate }} ({{
+        product.rating.count
+      }}
+      reviews)
+    </p>
+  </div>
+</div>

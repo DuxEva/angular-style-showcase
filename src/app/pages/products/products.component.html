@@ -1,0 +1,14 @@
+<div class="container">
+  <div
+    class="loader-container"
+    [ngClass]="{ 'loader-container': loading, hidden: !loading }"
+  >
+    <div class="loader"></div>
+  </div>
+  <div class="" [ngClass]="{ hidden: loading, grid: !loading }">
+    <app-products-card
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-products-card>
+  </div>
+</div>
