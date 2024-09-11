@@ -34,7 +34,10 @@ $color_dark: #141625;
 
   .card {
     background-color: map-get($theme, background-color);
-    border: 1px solid map-get($theme, border);
+
+    &:hover {
+      border: map-get($theme, border) 1px solid;
+    }
 
     .card-body{
       .card-title{
