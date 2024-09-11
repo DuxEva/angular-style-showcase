@@ -2,14 +2,13 @@
 
 .card {
   padding: 5px;
-  width: 300px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   background-color: inherit;
 
   &:hover {
-    border: $white 1px solid;
+    border: rgb(50 106 85) 1px solid;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
@@ -22,7 +21,7 @@
     object-fit: cover;
 
     img{
-      width: 100%;
+      width: 95%;
       height: 100%;
       object-fit: cover;
     }
@@ -42,6 +41,15 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .card {
+      width: 100%;
+      border: red 1px solid;
+      justify-content: center;
+      grid-template-columns: none;
     }
   }
 }

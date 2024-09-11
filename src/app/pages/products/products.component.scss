@@ -46,4 +46,23 @@
     margin-bottom: 6rem;
   
   }
+
+  @media screen and (max-width: 1200px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .grid {
+      width: 100%;
+      justify-content: center;
+      grid-template-columns: none;
+      padding: 0 10px;
+    }
+  }
 }

@@ -17,10 +17,12 @@
   left: 0;
   border-bottom: 1px solid rgb(50 106 85);
   background: $white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
 
   .logo {
     font-size: 1.6rem;
+    display: block;
   }
 
   .nav {
@@ -62,6 +64,15 @@
         left: 0;
         transition: left 0.3s;
       }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .header{
+      .logo {
+          display: none;
+          border:red 1px solid;
+        }
     }
   }
 }
