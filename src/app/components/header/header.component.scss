@@ -28,10 +28,13 @@
   .nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    div{
+      display: flex;
+      gap: 1rem;
+    }
     a {
       color: $green;
-      text-decoration: none;
+      text-decoration: none
     }
     .theme {
       display: flex;
@@ -43,6 +46,7 @@
       background-color: $green;
       border-radius: 20px;
       position: relative;
+      margin-left: 1rem;
 
       .circle {
         width: 18px;
@@ -66,13 +70,21 @@
       }
     }
   }
+}
 
-  @media screen and (max-width: 650px) {
-    .header{
-      .logo {
-          display: none;
-          border:red 1px solid;
-        }
+@media screen and (max-width: 650px) {
+  .header {
+    .logo {
+      display: none;
+      border: red 1px solid;
+    }
+    .nav {
+      width: 100%;
+      justify-content: space-between;
+      .theme {
+        margin-left: 0;
+      }
     }
   }
+
 }
