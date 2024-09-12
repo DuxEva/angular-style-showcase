@@ -61,25 +61,46 @@
 }
 
 @media screen and (max-width: 950px) {
-    .home{
+  .home{
 
-      .content-container{
-        h1 {
-          font-size: 2rem;
-        }
-        .text-container{
-          width: 100%;
-          .content{
-            padding: 2rem 2rem;
-            h1{
-              font-size: 1.4rem;
-            }
-            p{
-              font-size: 2rem;
-            } 
+    .content-container{
+      h1 {
+        font-size: 2rem;
+      }
+      .text-container{
+        width: 100%;
+        .content{
+          padding: 2rem 2rem;
+          h1{
+            font-size: 1.4rem;
           }
+          p{
+            font-size: 2rem;
+          } 
         }
       }
     }
-    
+  }  
+}
+@media screen and (max-width: 450px) {
+  .home{
+
+    .content-container{
+      h1 {
+        font-size: 1.5rem;
+      }
+      .text-container{
+        width: 100%;
+        .content{
+          padding: 1rem;
+          h1{
+            font-size: 1.2rem;
+          }
+          p{
+            font-size: 1.5rem;
+          } 
+        }
+      }
+    }
+  }  
 }
