@@ -36,6 +36,7 @@
       .text-container{
         display: flex;
         align-items: center;
+        justify-content: center;
         z-index: 15;
         width: 60%;
 
@@ -57,4 +58,28 @@
 
     }
 
+}
+
+@media screen and (max-width: 950px) {
+    .home{
+
+      .content-container{
+        h1 {
+          font-size: 2rem;
+        }
+        .text-container{
+          width: 100%;
+          .content{
+            padding: 2rem 2rem;
+            h1{
+              font-size: 1.4rem;
+            }
+            p{
+              font-size: 2rem;
+            } 
+          }
+        }
+      }
+    }
+    
 }
