@@ -1,14 +1,22 @@
-import { Directive, HostBinding, Input, OnInit } from '@angular/core';
+import {
+  Directive,
+  HostBinding,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
 })
-export class HighlightDirective implements OnInit {
-  @Input() color = 'yellow';
+export class HighlightDirective implements OnChanges {
+  @Input() color = 'white';
 
-  @HostBinding('style.backgroundColor') backgroundColor!: string;
+  @HostBinding('style.color') colorText: string | null = null;
 
-  ngOnInit() {
-    this.backgroundColor = this.color;
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['color']) {
+      this.colorText = this.color || 'white';
+    }
   }
 }

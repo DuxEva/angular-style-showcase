@@ -10,9 +10,7 @@ export class ProductsService {
   URL = 'https://fakestoreapi.com/products';
   theme = localStorage.getItem('theme') || 'light-mode';
 
-  constructor(private http: HttpClient) {
-    console.log('theme', this.theme);
-  }
+  constructor(private http: HttpClient) {}
 
   getProducts() {
     return this.http.get<Product[]>(this.URL).pipe(
